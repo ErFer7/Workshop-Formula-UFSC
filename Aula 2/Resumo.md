@@ -157,13 +157,67 @@ a = []  # Declaração de uma lista vazia.
 b = [1, 2, 3, 4]  # Lista com 4 valores.
 c = ["string", 1.5, 4, True]  # Lista com valores de diferentes tipos.
 
-# Métodos das listas
-b.append(1)  # Adicina o valor "1" no final da lista.
+# Para acessar um elemento de uma lista é necessário usar "[índice]".
+# Lembrando que a contagem começa em 0.
+b[0]  # Acessa o primeiro elemento de uma lista.
+
+# Alguns métodos das listas
+b.append(1)     # Adicina o valor "1" no final da lista.
 b.insert(1, 5)  # Insere o valor "5" no índice "1" da lista.
-b.remove(5)  # Remove o valor "5".
-b.sort()  # Ordena a lista.
+b.remove(5)     # Remove o valor "5".
+b.sort()        # Ordena a lista.
+b.reverse()     # Reverte a lista.
+b.count(5)      # Conta quantas vezes o valor "5" aparece na lista.
+e = b.copy()    # Copia uma lista para outra.
+
+# Funções aplicáveis nas listas.
+len(b)  # Retorna o tamanho de "b".
+max(b)  # Retorna o maior valor em "b".
+min(b)  # Retorna o menor valor em "b".
+
+# Existem várias outras operações que podem ser feitas.
+
+# Operações extras:
+f = a + b  # Une as listas.
+g = f[1:4]  # Retorna a lista em um intervalo específico: índice [1, 4).
+
+# É possível checar se um elemento está ou não na lista com o "in".
+if 5 in b:
+    print("5 está na lista \"b\"")
+
+# Com o "not" é possível verificar se o valor não está na lista.
+if 10 not in b:
+    print("10 não está na lista \"b\"")
+
+# Outra forma de inicializar as listas é com "List comprehension".
+h = [n for n in range(10)]  # Cria uma lista com valores de 0 a 9.
 ```
 
 ---
 
-# Mais conteúdo em breve!
+## Match
+
+```python
+# O match é uma feature recente no python (em 2021) e pode ser usado para
+# fazer várias comparações sem usar uma cadeia de if's e elif's.
+
+user_input = input()
+
+match user_input:
+    case "A":
+        print("O input é \"A\"")
+    case "B":
+        print("O input é \"B\"")
+    case _:
+        print("O input é outra coisa.")
+
+# Também podem ser usados outros operadores para modificar o comportamento.
+match user_input:
+    case "A" | "C":  # Verifica se é "A" ou "C", ambos são aceitos.
+        print("O input é \"A\" ou \"C\"")
+    case "B" | "D":
+        print("O input é \"B\" ou \"D\"")
+    case _:
+        print("O input é outra coisa.")
+
+```
