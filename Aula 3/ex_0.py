@@ -5,7 +5,8 @@ Aula 2.
 
 Este programa conta a quantidade de cada palavra e um texto.
 
-Esta não é necessariamente a forma mais ideal, aqui os dicionários foram usados como um exemplo apenas.
+Esta não é necessariamente a forma mais ideal, aqui os dicionários foram usados como um exemplo
+apenas.
 '''
 
 text = input().split()
@@ -23,4 +24,4 @@ for word in text:
         count_dict[word] = 1
 
 for key in count_dict:
-    print(f"A palavra \"{key}\" foi encontrada {count_dict[key]} vezes no texto")
+    print(f'A palavra \"{key}\" foi encontrada {count_dict[key]} vezes no texto')

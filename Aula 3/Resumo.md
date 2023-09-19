@@ -13,9 +13,9 @@ a = None
 
 # Dicionários são estruturas que possuem chaves no lugar de índices.
 b = {}                          # Dicionário vazio.
-c = {"a" : 1, "b" : 2, "c": 3}  # Dicionário com 3 valores.
+c = {'a' : 1, 'b' : 2, 'c': 3}  # Dicionário com 3 valores.
 
-c["a"]  # Acessa o valor que estiver na chave "a".
+c['a']  # Acessa o valor que estiver na chave "a".
 
 c.keys()    # Retorna as chaves.
 c.values()  # Retorna os valores.
@@ -64,7 +64,7 @@ def foo(arg):
 # def <nome da função> (<argumentos>):
 #   <corpo da função>
 
-foo("argumento")  # Chama a função.
+foo('argumento')  # Chama a função.
 
 # Funções também podem retornar valores:
 def func(x: float):  # float foi usado como uma anotação de documentação.
@@ -121,15 +121,15 @@ def decor(func):
 
     # Função de empacotamento.
     def wrapper():
-        print("Alguma coisa antes da função.")
+        print('Alguma coisa antes da função.')
         func()  # Função a ser decorada.
-        print("Alguma coisa depois da função.")
+        print('Alguma coisa depois da função.')
 
     return wrapper
 
 @decor           # Aplica o decorador à função.
 def log_text():  # Função a ser decorada.
-    print("Texto da função.")
+    print('Texto da função.')
 
 log_text()  # Chamada da função a ser decorada.
 ```

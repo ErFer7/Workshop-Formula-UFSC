@@ -6,25 +6,25 @@
 
 ```python
 
-# Strings representam textos e podem ser definidos com o uso de aspas.
+# Strings representam textos e podem ser definidos com o uso de aspas ou apóstrofos.
 a = "Isso é um string"
 b = 'Isso também é um string'
 
 # É possível usar caracteres especiais para adicionar uma nova linha.
-c = "Primeira linha\nSegunda linha"
+c = 'Primeira linha\nSegunda linha'
 
 # A contra-barra é usada para fazer o "escape" de caracteres que
 # normalmente seriam reconhecidos como parte da linguagem.
-# '\"' irá ser exibido como '"' no console e '\\' será exibido como '\'.
-d = "Caractere de escape: \", \\"
+# "\'" irá ser exibido como "'" no console e "\\" será exibido como "\".
+d = 'Caractere de escape: \', \\'
 
 # É possível concatenar strings com o operador de soma.
 # Resultado: String 1, String 2.
-e = "String 1, " + "String 2."
+e = 'String 1, ' + 'String 2.'
 
 # É possível multiplicar o string por um número. O exemplo abaixo produz
 # f = "ababababab"
-f = "ab" * 5
+f = 'ab' * 5
 ```
 
 ---
@@ -36,7 +36,7 @@ f = "ab" * 5
 a = input()
 
 # Desta forma o programa irá exibir uma mensagem no input.
-b = input("Insira alguma coisa: ")
+b = input('Insira alguma coisa: ')
 
 # Conversão do input de um string para inteiro.
 c = int(input())
@@ -59,9 +59,9 @@ e = map(int, input().split())
 # Um bloco if/else checa se a condição é verdadeira e executa o que estiver
 # no "if" caso seja, caso contrário o "else" será executado.
 if  2 + 2 == 4:
-    print("A matemática ainda funciona.")
+    print('A matemática ainda funciona.')
 else:
-    print("A matemática não está funcionando.")
+    print('A matemática não está funcionando.')
 
 # Operadores condicionais:
 # "a == b": checa se "a" é igual a "b".
@@ -79,11 +79,11 @@ else:
 num = int(input())
 
 if  num > 10:
-    print("num é maior que 10.")
+    print('num é maior que 10.')
 elif num > 5:
-    print("num é maior que 5 e menor ou igual a 10.")
+    print('num é maior que 5 e menor ou igual a 10.')
 else:
-    print("num é menor ou igual a 5.")
+    print('num é menor ou igual a 5.')
 
 # É possível usar "and", "or" e "not" para fazer operaões lógicas.
 # "a and b": Executa se "a" e "b" forem verdadeiros.
@@ -91,11 +91,11 @@ else:
 # "not a": Executa se "a" for falso.
 # Lembre-se que as parenteses indicam a precedência da operação.
 if (num >= 10 and num <= 50) or (num == 99):
-    print("O número está no intervalo [10, 50] ou é igual a 99.")
+    print('O número está no intervalo [10, 50] ou é igual a 99.')
 
 # No python é possível escrever comparações como na matemática regular.
 if (10 <= num <= 50) or (num == 99):
-    print("O número está no intervalo [10, 50] ou é igual a 99.")
+    print('O número está no intervalo [10, 50] ou é igual a 99.')
 
 # É possível atribuir valores "booleanos" (Verdadeiro ou falso) para as
 # variáveis.
@@ -113,7 +113,7 @@ c = 2 + 2 == 4  # "c" terá o valor verdadeiro.
 # Um loop while executa enquanto a condição for verdadeira, repetindo o
 # que estiver no seu bloco de execução.
 while True:
-    print("Loop infinito!")
+    print('Loop infinito!')
 
 # Executa o loop 10 vezes.
 a = 0
@@ -127,12 +127,12 @@ while True:
 
     user_input = input()
 
-    if user_input == "saia":
+    if user_input == 'saia':
         break  # Sai do loop.
-    elif user_input == "pule a iteração":
+    elif user_input == 'pule a iteração':
         continue  # Vai para o início do loop.
 
-    print("O usuário não saiu, nem pulou a iteração.")
+    print('O usuário não saiu, nem pulou a iteração.')
 
 # Um loop "for" executa com base em um intervalo de números ou lista.
 # range(início, fim, passo). No exemplo só foi usado um argumento, o fim.
@@ -143,7 +143,7 @@ for i in range(10):
 
 # Caso o índice não seja usado é recomendável deixá-lo como um "_".
 for _ in range(10):
-    print("Valor não usado.")
+    print('Valor não usado.')
 ```
 
 ---
@@ -155,7 +155,7 @@ for _ in range(10):
 
 a = []  # Declaração de uma lista vazia.
 b = [1, 2, 3, 4]  # Lista com 4 valores.
-c = ["string", 1.5, 4, True]  # Lista com valores de diferentes tipos.
+c = ['string', 1.5, 4, True]  # Lista com valores de diferentes tipos.
 
 # Para acessar um elemento de uma lista é necessário usar "[índice]".
 # Lembrando que a contagem começa em 0.
@@ -183,11 +183,11 @@ g = f[1:4]  # Retorna a lista em um intervalo específico: índice [1, 4).
 
 # É possível checar se um elemento está ou não na lista com o "in".
 if 5 in b:
-    print("5 está na lista \"b\"")
+    print('5 está na lista \"b\"')
 
 # Com o "not" é possível verificar se o valor não está na lista.
 if 10 not in b:
-    print("10 não está na lista \"b\"")
+    print('10 não está na lista \"b\"')
 
 # Outra forma de inicializar as listas é com "List comprehension".
 h = [n for n in range(10)]  # Cria uma lista com valores de 0 a 9.
@@ -205,19 +205,19 @@ user_input = input()
 
 match user_input:
     case "A":
-        print("O input é \"A\"")
+        print('O input é \"A\"')
     case "B":
-        print("O input é \"B\"")
+        print('O input é \"B\"')
     case _:
         print("O input é outra coisa.")
 
 # Também podem ser usados outros operadores para modificar o comportamento.
 match user_input:
-    case "A" | "C":  # Verifica se é "A" ou "C", ambos são aceitos.
-        print("O input é \"A\" ou \"C\"")
-    case "B" | "D":
-        print("O input é \"B\" ou \"D\"")
+    case 'A' | 'C':  # Verifica se é "A" ou "C", ambos são aceitos.
+        print('O input é \"A\" ou \"C\"')
+    case 'B' | 'D':
+        print('O input é \"B\" ou \"D\"')
     case _:
-        print("O input é outra coisa.")
+        print('O input é outra coisa.')
 
 ```

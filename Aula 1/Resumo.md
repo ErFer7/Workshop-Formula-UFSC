@@ -5,7 +5,7 @@
 ---
 
 ```python
-print("Hello World!")
+print('Hello World!')
 ```
 
 ## Operações básicas
@@ -33,13 +33,13 @@ a = 0  # Declaração de uma variável com o valor '0'
 # começar com letras, símbolos e números não são permitidos. Além disso,
 # a linguagem tem recomendações quanto a formatação. Procure pela 'PEP 8'
 # para saber mais sobre a formatação do python.
-snake_case = "Veja a PEP 8"
+snake_case = 'Veja a PEP 8'
 
 # Os valores nas variáveis possuem tipos diferentes. Aqui estão alguns
 # exemplos:
 a = 1        # Tipo 'int'
 b = 1.25     # Tipo 'float'
-c = "texto"  # Tipo 'str' ou string
+c = 'texto'  # Tipo 'str' ou string
 d = True     # Tipo 'bool'
 ```
 
@@ -78,11 +78,11 @@ a = 2.55
 
 # Formatações para exibir 'a = 2.55' com a precisão de duas casas decimais
 
-print("a = %.2f" % a)           # Estilo C
-print("a = {0:.2f}".format(a))  # Format
-print(f"a = {a:.2f}")           # f-string
+print('a = %.2f' % a)           # Estilo C
+print('a = {0:.2f}'.format(a))  # Format
+print(f'a = {a:.2f}')           # f-string
 
 # É possível utilizar esta formatação também (não garante a precisão de
 # duas casas).
-print("a = ", a)
+print('a = ', a)
 ```
